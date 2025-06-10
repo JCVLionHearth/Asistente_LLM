@@ -45,7 +45,7 @@ if archivo:
         with st.spinner("⏳ Generando resumen..."):
             # El modelo de resumen tiene un límite, usamos solo una parte
             texto_corto = texto_limpio[:1024]
-            resumen = resumidor(texto_corto, max_length=130, min_length=30, do_sample=False)[0]['summary_text']
+            resumen = resumidor(texto_corto, max_length=1000, min_length=30, do_sample=False)[0]['summary_text']
             st.subheader("🧠 Resumen del contenido:")
             st.write(resumen)
 
